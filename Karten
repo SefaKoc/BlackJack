@@ -1,9 +1,25 @@
 
 public class Karten {
 
-	int zahl;
+	private int zahl;
+	private String bezeichnung;
 	public static Object []hand;
 	
+	public Karten() {
+		this.zahl = 0;
+	}
+	public int getZahl() {
+		return zahl;
+	}
+	public void setZahl(int zahl) {
+		this.zahl = zahl;
+	}
+	public String getBezeichnung() {
+		return bezeichnung;
+	}
+	public void setBezeichnung(String bezeichnung) {
+		this.bezeichnung = bezeichnung;
+	}
 //	public static int[] zufallszahlenErzeugen(int[]kartenarray){
 //		for(int i=0; i<kartenarray.length;i++){
 //			int zufzahl = (int)(Math.random()*(kartenarray.length));
@@ -12,6 +28,4 @@ public class Karten {
 //		}
 //		return kartenarray;
 //	}
-	
-
 }
