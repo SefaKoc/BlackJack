@@ -1,0 +1,15 @@
+
+public class Hand {
+
+
+
+	public static void main(String[] args) {
+		int[] handKarten = new int[5];
+		System.out.println();
+		System.out.println();
+		System.out.println("Hand: ");
+		erzeugeHand(handKarten, kartenarray);
+		farbeFinden(handKarten);
+	}
+
+}
