@@ -1,26 +1,41 @@
 
 public class Hand {
 	
-	    private Karten[] karten = new Karten[21];	
 
-		public static int [] kartenZiehen(int handKarten, int[]karten ) {
-			int [] hand = new int[handKarten]; 	
-			for (int i=0; i<5;i++) {
-				int zufZahl = (int)(Math.random()*(karten.length-i));
-				hand[i] = karten[zufZahl]; 
-				int andereStelle = karten[karten.length-i-1];
-				karten[karten.length-i-1] = karten[zufZahl];
-				karten[zufZahl] = andereStelle;	
+		private int anzKarten;
+		Karten[]deck;
+		
+		public Hand() {
+		}
+
+		public Karten[] kartenZiehen(int anzKarten, int[]deck ) {
+			int[] hand = new int[anzKarten]; 	
+			for (int i=0; i<hand.length;i++) {
+				int zufZahl = (int)(Math.random()*(deck.length-i));
+				hand[i] = deck[zufZahl]; 
+				int andereStelle = deck[deck.length-i-1];
+				deck[deck.length-i-1] = deck[zufZahl];
+				deck[zufZahl] = andereStelle;	
 			}
-			return hand; 
-		}
-		
-		public Karten[] getKarten() {
-			return karten;
+			return null;
+			
 		}
 
-		public void setKarten(Karten[] karten) {
-			this.karten = karten;
+		public int getAnzKarten() {
+			return anzKarten;
+		}
+
+		public void setAnzKarten(int anzKarten) {
+			this.anzKarten = anzKarten;
+		}
+
+		public Karten[] getDeck() {
+			return deck;
+		}
+
+		public void setDeck(Karten[] deck) {
+			this.deck = deck;
 		}
 		
+	
 }
