@@ -1,15 +1,26 @@
 
 public class Hand {
+	
+	    private Karten[] karten = new Karten[21];	
 
+		public static int [] kartenZiehen(int handKarten, int[]karten ) {
+			int [] hand = new int[handKarten]; 	
+			for (int i=0; i<5;i++) {
+				int zufZahl = (int)(Math.random()*(karten.length-i));
+				hand[i] = karten[zufZahl]; 
+				int andereStelle = karten[karten.length-i-1];
+				karten[karten.length-i-1] = karten[zufZahl];
+				karten[zufZahl] = andereStelle;	
+			}
+			return hand; 
+		}
+		
+		public Karten[] getKarten() {
+			return karten;
+		}
 
-
-	public static void main(String[] args) {
-		int[] handKarten = new int[5];
-		System.out.println();
-		System.out.println();
-		System.out.println("Hand: ");
-		erzeugeHand(handKarten, kartenarray);
-		farbeFinden(handKarten);
-	}
-
+		public void setKarten(Karten[] karten) {
+			this.karten = karten;
+		}
+		
 }
