@@ -1,26 +1,17 @@
 
 public class Karten {
 
-	private int zahl;
+	int zahl;
 	public static Object []hand;
 	
-	public static int[] zufallszahlenErzeugen(int[]kartenarray){
-		for(int i=0; i<kartenarray.length;i++){
-			int zufzahl = (int)(Math.random()*(kartenarray.length));
-			kartenarray[i] = zufzahl;
-			System.out.print(kartenarray[i] + ", ");
-		}
-		return kartenarray;
-	}
+//	public static int[] zufallszahlenErzeugen(int[]kartenarray){
+//		for(int i=0; i<kartenarray.length;i++){
+//			int zufzahl = (int)(Math.random()*(kartenarray.length));
+//			kartenarray[i] = zufzahl;
+//			System.out.print(kartenarray[i] + ", ");
+//		}
+//		return kartenarray;
+//	}
 	
-	
-	
-	public static void main(String[] args) {
-		
-		int[]kartenarray = new int[52];
-		System.out.println("Kartenarray: ");
-		zufallszahlenErzeugen(kartenarray);
-	}
 
 }
-
